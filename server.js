@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const app = require('./app');
-mongoose.connect("mongodb://localhost/express_books", {useNewUrlParser:true})
+const dbURL = process.env.MONGODB_URI;
+mongoose.connect(dbURL, {useNewUrlParser:true})
 const db = mongoose.connection;
 
 db.on("error", error => {
