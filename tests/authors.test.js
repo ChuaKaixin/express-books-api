@@ -72,6 +72,6 @@ test("DELETE /authors/:id should delete selected author", async() => {
 })
 test("GET/authors/:name should retrieve selected author", async() => {
     const response = await request(app).get("/authors/paulo");
-    expect(response.status).toBe(200);
+    expect(response.status).toBe(208);
     expect(response.body[0]).toMatchObject({name:"paulo", age:49});
 })
